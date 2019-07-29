@@ -8,5 +8,4 @@ git add .
 git commit -m 'gud'
 git remote add origin https://github.com/Capmare/Files.git
 git push -f origin master
-capmare
-23032003dnC
+
