@@ -1,0 +1,210 @@
+Nmap scan report for evalguard.com (185.248.199.148)
+Host is up (0.084s latency).
+
+
+
+Not shown: 917 closed ports, 66 filtered ports
+PORT     STATE SERVICE  VERSION
+21/tcp   open  ftp      vsftpd 3.0.3
+22/tcp   open  ssh      OpenSSH 7.4p1 Debian 10+deb9u6 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 ab:5e:dd:27:ee:22:9d:49:a0:10:2e:09:87:50:94:ad (RSA)
+|   256 43:25:f6:2e:bd:1a:ba:6b:48:0c:31:fe:4e:dd:b5:6e (ECDSA)
+|_  256 cc:ad:6d:23:91:ab:26:15:a5:65:0c:20:6c:fa:38:73 (ED25519)
+
+
+
+
+25/tcp   open  smtp     Exim smtpd 4.89
+| smtp-commands: cloud.idealcode.ro Hello dynamic-sub-mobile-137.vodafone.ro [213.233.64.137], SIZE 52428800, 8BITMIME, PIPELINING, AUTH PLAIN LOGIN, STARTTLS, HELP, 
+|_ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP 
+| ssl-cert: Subject: commonName=cloud.idealcode.ro
+| Subject Alternative Name: DNS:cloud.idealcode.ro, DNS:www.cloud.idealcode.ro
+| Not valid before: 2019-06-21T18:18:37
+|_Not valid after:  2019-09-19T18:18:37
+|_ssl-date: 2019-07-29T18:29:26+00:00; -1m02s from scanner time.
+
+
+
+
+
+53/tcp   open  domain   ISC BIND 9.10.3-P4 (Debian Linux)
+
+
+
+80/tcp   open  http     nginx
+|_http-server-header: nginx
+|_http-title: EvalGuard - Offensive Security
+
+
+
+
+
+
+
+110/tcp  open  pop3     Dovecot pop3d
+|_pop3-capabilities: TOP UIDL USER PIPELINING RESP-CODES STLS AUTH-RESP-CODE SASL(PLAIN LOGIN) CAPA
+| ssl-cert: Subject: commonName=cloud.idealcode.ro
+| Subject Alternative Name: DNS:cloud.idealcode.ro, DNS:www.cloud.idealcode.ro
+| Not valid before: 2019-06-21T18:18:37
+|_Not valid after:  2019-09-19T18:18:37
+|_ssl-date: TLS randomness does not represent time
+
+
+
+
+143/tcp  open  imap     Dovecot imapd
+|_imap-capabilities: SASL-IR LOGIN-REFERRALS post-login more listed LITERAL+ ENABLE Pre-login AUTH=PLAIN have OK ID STARTTLS IMAP4rev1 capabilities AUTH=LOGINA0001 IDLE
+| ssl-cert: Subject: commonName=cloud.idealcode.ro
+| Subject Alternative Name: DNS:cloud.idealcode.ro, DNS:www.cloud.idealcode.ro
+| Not valid before: 2019-06-21T18:18:37
+|_Not valid after:  2019-09-19T18:18:37
+|_ssl-date: TLS randomness does not represent time
+
+
+
+
+
+443/tcp  open  ssl/http nginx
+|_http-server-header: nginx
+|_http-title: 400 The plain HTTP request was sent to HTTPS port
+| ssl-cert: Subject: commonName=evalguard.com
+| Subject Alternative Name: DNS:evalguard.com, DNS:www.evalguard.com
+| Not valid before: 2019-07-27T08:40:21
+|_Not valid after:  2019-10-25T08:40:21
+|_ssl-date: TLS randomness does not represent time
+| tls-nextprotoneg: 
+|_  http/1.1
+
+
+
+
+
+465/tcp  open  ssl/smtp Exim smtpd 4.89
+|_smtp-commands: Couldn't establish connection on port 465
+| ssl-cert: Subject: commonName=cloud.idealcode.ro
+| Subject Alternative Name: DNS:cloud.idealcode.ro, DNS:www.cloud.idealcode.ro
+| Not valid before: 2019-06-21T18:18:37
+|_Not valid after:  2019-09-19T18:18:37
+
+
+
+
+587/tcp  open  smtp     Exim smtpd 4.89
+| smtp-commands: cloud.idealcode.ro Hello evalguard.com [213.233.103.26], SIZE 52428800, 8BITMIME, PIPELINING, AUTH PLAIN LOGIN, STARTTLS, HELP, 
+|_ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP 
+|_ssl-date: 2019-07-29T18:32:54+00:00; +2m28s from scanner time.
+
+
+
+
+993/tcp  open  ssl/imap Dovecot imapd
+|_imap-capabilities: have capabilities AUTH=LOGINA0001 SASL-IR LOGIN-REFERRALS ID post-login more listed LITERAL+ IMAP4rev1 OK ENABLE Pre-login AUTH=PLAIN IDLE
+| ssl-cert: Subject: commonName=cloud.idealcode.ro
+| Subject Alternative Name: DNS:cloud.idealcode.ro, DNS:www.cloud.idealcode.ro
+| Not valid before: 2019-06-21T18:18:37
+|_Not valid after:  2019-09-19T18:18:37
+
+
+
+
+995/tcp  open  ssl/pop3 Dovecot pop3d
+| ssl-cert: Subject: commonName=cloud.idealcode.ro
+| Subject Alternative Name: DNS:cloud.idealcode.ro, DNS:www.cloud.idealcode.ro
+| Not valid before: 2019-06-21T18:18:37
+|_Not valid after:  2019-09-19T18:18:37
+
+
+
+
+2525/tcp open  smtp     Exim smtpd 4.89
+| smtp-commands: cloud.idealcode.ro Hello evalguard.com [213.233.103.26], SIZE 52428800, 8BITMIME, PIPELINING, AUTH PLAIN LOGIN, STARTTLS, HELP, 
+|_ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP 
+| ssl-cert: Subject: commonName=cloud.idealcode.ro
+| Subject Alternative Name: DNS:cloud.idealcode.ro, DNS:www.cloud.idealcode.ro
+| Not valid before: 2019-06-21T18:18:37
+|_Not valid after:  2019-09-19T18:18:37
+
+
+
+
+3306/tcp open  mysql    MySQL 5.5.5-10.1.38-MariaDB-0+deb9u1
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.5-10.1.38-MariaDB-0+deb9u1
+|   Thread ID: 20785
+|   Capabilities flags: 63487
+|   Some Capabilities: Support41Auth, Speaks41ProtocolOld, Speaks41ProtocolNew, IgnoreSigpipes, ConnectWithDatabase, SupportsTransactions, FoundRows, IgnoreSpaceBeforeParenthesis, SupportsLoadDataLocal, SupportsCompression, LongColumnFlag, DontAllowDatabaseTableColumn, LongPassword, InteractiveClient, ODBCClient, SupportsMultipleResults, SupportsMultipleStatments, SupportsAuthPlugins
+|   Status: Autocommit
+|   Salt: q`o+%xMZ]Br8_UmCFu=n
+|_  Auth Plugin Name: 103
+
+
+
+
+
+8080/tcp open  http     Apache httpd 2.4.25 ((Debian) mod_fcgid/2.3.9 OpenSSL/1.0.2r)
+| http-open-proxy: Potentially OPEN proxy.
+|_Methods supported:CONNECTION
+|_http-title: EvalGuard - Offensive Security
+
+
+
+
+
+8083/tcp open  http     nginx
+|_http-server-header: nginx
+|_http-title: Did not follow redirect to https://evalguard.com:8083/
+
+
+
+
+
+8443/tcp open  ssl/ssl  Apache httpd (SSL-only mode)
+|_http-server-header: Apache/2.4.25 (Debian) mod_fcgid/2.3.9 OpenSSL/1.0.2r
+|_http-title: 400 Bad Request
+| ssl-cert: Subject: commonName=evalguard.com
+| Subject Alternative Name: DNS:evalguard.com, DNS:www.evalguard.com
+| Not valid before: 2019-07-27T08:40:21
+|_Not valid after:  2019-10-25T08:40:21
+|_ssl-date: TLS randomness does not represent time
+Device type: general purpose
+Running (JUST GUESSING): OpenBSD 4.X (86%)
+OS CPE: cpe:/o:openbsd:openbsd:4.0
+Aggressive OS guesses: OpenBSD 4.0 (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 12 hops
+Service Info: Host: cloud.idealcode.ro; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+
+
+
+
+Host script results:
+|_clock-skew: mean: 42s, deviation: 2m28s, median: -1m02s
+
+
+
+
+
+
+TRACEROUTE (using port 199/tcp)
+HOP RTT       ADDRESS
+1   3.31 ms   _gateway (192.168.43.72)
+2   ...
+3   161.21 ms 10.241.147.213
+4   199.44 ms 10.241.1.210
+5   97.88 ms  192.168.159.225
+6   353.48 ms 10.100.230.30
+7   88.46 ms  10.100.230.234
+8   312.16 ms peering-vodafone.ro.gtsce.net (193.226.155.113)
+9   134.49 ms 85.9.9.82
+10  134.78 ms r11-ten4-6-3221.buh7.ro.gtsce.net (85.9.32.93)
+11  287.71 ms 85.9.8.222
+12  88.37 ms  185.248.199.148
+
+Stats: 0:28:52 elapsed; 1 hosts completed (1 up), 0 undergoing Script Post-Scan
+NSE Timing: About 0.00% done
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1732.60 seconds
+
